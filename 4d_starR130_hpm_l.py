@@ -293,19 +293,19 @@ for n in range(num_step):
 
     list_f.append(assemble(_f * dx)/area)
 
-    if n in [0,12,24,36,48,60,72,84,96,108,120,132,144,156,168,180,192,204,216,228,240,480,960,1200,1440,1680,1920,2400,4800,7200,9600,14399]:
+    if n in [0,12,24,36,48,60,72,84,96,108,120,132,144,156,168,180,192,204,216,228,240,480,960,1200,1440,1680,1920,2400,4800,7200,9600,11999]:
     #if n in [0,8,16,24,32,40,48,56,64,72,80,88,96,104,112,120,128,136,144,152,160,320,480,640,800,960,1120,1280,1440,1600,3200,4800,6400,8000,9999]:
     #if n in [0,4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64,68,72,76,80,120,160,100,800,1600,2400,3200,4000,6000,7999]:
     #if n in [0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,60,80,100,400,800,1200,1600,2000,3000,3999]:
     #if n in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,30,40,50,100,200,400,600,800,1000]:
         
         #Create VTK files for visualization output
-        vtkfile_glc = File('results_4d_starR130_hpm_l/glc/glc_starR130_hpm_l_%sof8000.pvd' % n)
-        vtkfile_atp = File('results_4d_starR130_hpm_l/atp/atp_starR130_hpm_l_%sof8000.pvd' % n)
-        vtkfile_adp = File('results_4d_starR130_hpm_l/adp/adp_starR130_hpm_l_%sof8000.pvd' % n)
-        vtkfile_gly = File('results_4d_starR130_hpm_l/gly/gly_starR130_hpm_l_%sof8000.pvd' % n)
-        vtkfile_pyr = File('results_4d_starR130_hpm_l/pyr/pyr_starR130_hpm_l_%sof8000.pvd' % n)
-        vtkfile_lac = File('results_4d_starR130_hpm_l/lac/lac_starR130_hpm_l_%sof8000.pvd' % n)
+        vtkfile_glc = File('results_4d_starR130_hpm_l/glc/glc_starR130_hpm_l_%sof12000.pvd' % n)
+        vtkfile_atp = File('results_4d_starR130_hpm_l/atp/atp_starR130_hpm_l_%sof12000.pvd' % n)
+        vtkfile_adp = File('results_4d_starR130_hpm_l/adp/adp_starR130_hpm_l_%sof12000.pvd' % n)
+        vtkfile_gly = File('results_4d_starR130_hpm_l/gly/gly_starR130_hpm_l_%sof12000.pvd' % n)
+        vtkfile_pyr = File('results_4d_starR130_hpm_l/pyr/pyr_starR130_hpm_l_%sof12000.pvd' % n)
+        vtkfile_lac = File('results_4d_starR130_hpm_l/lac/lac_starR130_hpm_l_%sof12000.pvd' % n)
         
         vtkfile_glc << (_a, t[0])
         vtkfile_atp << (_b, t[0])
